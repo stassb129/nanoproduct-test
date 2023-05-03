@@ -1,0 +1,31 @@
+version: '3.8'
+
+services:
+  frontend:
+    build: ./nanoproduct-test-frontend
+    volumes:
+      - ./nanoproduct-test-frontend/src:/app/nanoproduct-test-frontend/src
+      - ./nanoproduct-test-frontend/public:/app/nanoproduct-test-frontend/public
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=development
+      - CHOKIDAR_USEPOLLING=true
+    command: npm start
+
+  backend:
+    build: ./nanoproduct-test-backend
+    volumes:
+      - ./nanoproduct-test-backend/src:/app/nanoproduct-test-backend/src
+      - ./nanoproduct-test-backend/tmp:/app/nanoproduct-test-backend/tmp
+    ports:
+      - "8080:8080"
+    environment:
+      - NODE_ENV=development
+      - CHOKIDAR_USEPOLLING=true
+    command: sh -c "sleep 10s && npm run start:dev"
+
+  mongo:
+    image: mongo
+    ports:
+      - "27017:27017"

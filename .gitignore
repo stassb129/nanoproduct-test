@@ -1,0 +1,57 @@
+# compiled output
+nanoproduct-test-backend/dist
+nanoproduct-test-backend/node_modules
+
+# Logs
+logs
+*.log
+nanoproduct-test-backend/npm-debug.log*
+nanoproduct-test-backend/pnpm-debug.log*
+nanoproduct-test-backend/yarn-debug.log*
+nanoproduct-test-backend/yarn-error.log*
+nanoproduct-test-backend/lerna-debug.log*
+
+# OS
+nanoproduct-test-backend/.DS_Store
+
+# Tests
+nanoproduct-test-backend/coverage
+nanoproduct-test-backend/.nyc_output
+
+# IDEs and editors
+.idea
+nanoproduct-test-backend/.idea
+nanoproduct-test-backend/.project
+nanoproduct-test-backend/.classpath
+nanoproduct-test-backend/.c9/
+*.launch
+nanoproduct-test-backend/.settings/
+*.sublime-workspace
+
+
+
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+nanoproduct-test-frontend/node_modules
+nanoproduct-test-frontend/.pnp
+nanoproduct-test-frontend/.pnp.js
+
+# testing
+nanoproduct-test-frontend/coverage
+
+# production
+nanoproduct-test-frontend/build
+
+# misc
+.DS_Store
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+
