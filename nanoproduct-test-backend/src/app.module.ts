@@ -9,6 +9,7 @@ import { NotificationModule } from './notification/notification.module';
 
 @Module({
     imports: [UserModule, DoctorModule,
+
         MongooseModule.forRoot('mongodb://mongo:27017/nest'),
         NotificationModule,],
     controllers: [AppController],

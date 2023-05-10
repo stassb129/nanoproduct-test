@@ -107,7 +107,6 @@ export class DoctorService {
         }
     }
 
-    // TODO ИСПРАВИТЬ ЭТО ДЕРЬМО С НЕСОХРАНЕНИЕМ СЛОТОВ, ПО ПОНЯТНЫМ ТОЛЬКО В АДУ ПРИЧИНАМ
     async bookSlot(doctorId: string, slotTime: string, userId: string): Promise<Doctor> {
         const doctor = await this.doctorModel.findById(doctorId).exec();
         const slot = doctor.slots.find((s) => s.slotTime === slotTime);
